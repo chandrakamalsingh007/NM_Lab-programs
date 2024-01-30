@@ -7,6 +7,7 @@ int main(){
     float a,b,f0,f1,f2,x;
     int step=1;
     up:
+    cout<<setprecision(5)<<fixed;
     cout<<"Enter initial guesses a and b:"<<endl;
     cin>>a;
     cin>>b;
