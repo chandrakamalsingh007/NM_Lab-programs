@@ -8,10 +8,10 @@ int main(){
     int step=1;
     up:
     cout<<setprecision(5)<<fixed;
-    cout<<"Enter initial guesses a and b:"<<endl;
-    cin>>a;
-    cin>>b;
-    cout<<"\n Steps \t\ta \t\tb \t\t x \t\t f(x)\n"<<endl;
+    cout<<"Enter initial guesses x0 and x1:"<<endl;
+    cin>>x0;
+    cin>>x1;
+    cout<<"\n Steps \t\tx0 \t\tx1 \t\t x2 \t\t f(x)\n"<<endl;
     do{
         f0=f(x0);
         f1=f(x1);
@@ -21,7 +21,7 @@ int main(){
     }
         x2=(x0+x1)/2;
         f2=f(x2);
-        cout<<step<<" \t\t"<<a <<" \t\t"<<b<<" \t\t"<<x<<" \t\t"<<f2<<endl;
+        cout<<step<<" \t\t"<<x0 <<" \t\t"<<x1<<" \t\t"<<x2<<" \t\t"<<f2<<endl;
         if((f0*f2)<0){
             x1=x2;
             f1-f2;
