@@ -5,7 +5,7 @@ using namespace std;
 
 int main(){
     float x0,x1,x2,f0,f1,f2;
-    int i=1;
+    int i=1,N=10;
     cout<<setprecision(5)<<fixed;
     cout<<"Enter initial guesses x0 and x1:"<<endl;
     cin>>x0;
@@ -20,9 +20,14 @@ int main(){
         cout<<i<<" \t\t"<<x0<<" \t\t"<<x1<<" \t\t"<<f0<<" \t\t"<<f1<<" \t\t"<<x2<<endl;
         x0=x1;
         x1=x2;
+        
+        if(i>N){
+            cout<<"Not convergent";
+            exit(0);
+        }
         i++;
 
     }while(fabs(f2)>e);
-    cout<<"Root is "<<x2<<endl;
+    cout<<"\nRoot is "<<x2<<endl;
     return 0;
 }
