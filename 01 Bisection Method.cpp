@@ -11,14 +11,14 @@ int main(){
     cout<<"Enter initial guesses a and b:"<<endl;
     cin>>a;
     cin>>b;
-    f0=f(a);
-    f1=f(b);
-    if((f0*fb)>0){
+    cout<<"\n Steps \t\ta \t\tb \t\t x \t\t f(x)\n"<<endl;
+    do{
+        f0=f(a);
+        f1=f(b);
+        if((f0*fb)>0){
         cout<<"Wrong guesses";
         goto up:
     }
-    cout<<"\n Steps \t\ta \t\tb \t\t x \t\t f(x)\n"<<endl;
-    do{
         x=(a+b)/2;
         f2=f(x);
         cout<<step<<" \t\t"<<a <<" \t\t"<<b<<" \t\t"<<x<<" \t\t"<<f2<<endl;
